@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+body{
+    background-color: rgb(37, 35, 35);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navcontainer{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+    box-shadow: 0px 10px 10px rgb(12, 12, 12);
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.navcontainer .logo{
+    color: rgb(0, 204, 255);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navcontainer form button{
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navcontainer form .goback{
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+.navcontainer form .logout{
+    background: rgb(213, 69, 69);
+    color: white;
+    cursor: pointer;
+}
+
+.navcontainer form .goback:hover{
+    background: linear-gradient(to left,darkgray 0,rgb(0, 204, 255) 100%);
+    color: black;
+}
+
+.navcontainer form .logout:hover{
+    background: linear-gradient(to left,darkgray 0,rgb(255, 98, 98) 100%);
+    color: black;
+}
+
+.wrapper{
+    background: linear-gradient(to right,  rgb(105, 105, 206) , violet);
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    border: 3px solid white;
+    box-shadow: 0px 10px 20px black;
+    width: max-content;
+}
+
+
+
+.imagecontainer img{
+    width: 300px;
+    height: 550px;
+    object-fit: fill;
+    border-radius: 10px;
+    border: 1px solid orangered;
+}
+
+.formcontainer h2{
+    margin-left: 35%;
+    margin-bottom: 20px;
+}
+
+.formcontainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.username input, .email input, .password input{
+    width: 500px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-left: 35px;
+    font-size: 18px;
+}
+
+input:focus{
+    border: 1px solid red;
+}
+
+input::placeholder{
+    color: transparent;
+}
+
+input:focus::placeholder{
+    color: darkslategray;
+}
+.username label{
+    position: absolute;
+    color: teal;
+    top: 90px;
+    left: 380px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.username input:focus + label, .username input:not(:placeholder-shown)~ label{
+    transition-duration: 0.3s;
+    top: 60px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.email label{
+    position: absolute;
+    color: teal;
+    top: 165px;
+    left: 380px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.email input:focus + label, .email input:not(:placeholder-shown)~ label{
+    transition-duration: 0.3s;
+    top: 132px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.password label{
+    position: absolute;
+    color: teal;
+    top: 240px;
+    left: 380px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.password input:focus + label, .password input:not(:placeholder-shown)~ label{
+    transition-duration: 0.3s;
+    top: 210px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.accessmember{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.accessmember input{
+    margin: 15px 8px 10px 0px;
+    width: 20px;
+    height: 20px;
+    color: teal;
+}
+
+.accessmember input:nth-last-child(2){
+    margin-left: 20px;
+}
+
+.interestfield{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.interestfield label{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.interestfield textarea{
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.formcontainer form button{
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(79, 67, 92);
+    color: white;
+    cursor: pointer;
+}
+
+.formcontainer form button:hover{
+    background-color: teal;
+}
+
+/**/
+
+form .gotohome .fa-house{
+    margin-right: 5px;
+    color: red;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="loginpage.css" />
+    <script
+      src="https://kit.fontawesome.com/c31787acac.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>LOG IN HERE</h2>
+        <form action="/validate" method="post">
+      <div class="signupele">
+        <div class="buttons">
+          <button class="btn1">
+            Sign In with Facebook
+            <span><i class="fa-brands fa-square-facebook"></i></span>
+          </button>
+          <button class="btn2">
+            Sign In with Instagram
+            <span><i class="fa-brands fa-square-instagram"></i></span>
+          </button>
+          <button class="btn3">
+            Sign In with X
+            <span><i class="fa-brands fa-square-x-twitter"></i></span>
+          </button>
+        </div>
+
+        <div class="line"></div>
+        <div class="signinbox">
+          <input type="text" class="textbox" name="email" placeholder="Username or Email" />
+          <label for="" class="emaillabel" >Email</label>
+
+          <input type="password" id="password" name="password" placeholder="Password" />
+          <label for="" class="passwordlabel">Password</label>
+          <i
+            class="fa-solid fa-eye-slash"
+            id="eyeiconslash"
+            style="display: none"
+          ></i>
+          <i class="fa-solid fa-eye" id="eyeicon"></i>
+
+          <a href="">Forgot password</a>
+
+          <button>Submit</button>
+        </div>
+    </form>
+
+  </div>
+  <div class="gotocontainer">
+    <form action="/home" class="gotohomeform"><button class="gotohome"><i class="fa-solid fa-house"></i> HOME</button></form>
+    <form action="/register" class="gotoregisterform"><button class="gotoregister">New User? Click here to Register</button></form>
+  </div>
+  
+    </div>
+
+    <script>
+      let a = document.getElementById("eyeicon");
+      let b = document.getElementById("eyeiconslash");
+      let p = document.getElementById("password");
+      a.onclick = function () {
+        if (p.type == "password") {
+          p.type = "text";
+          b.style.display = "block";
+          a.style.display = "hidden";
+        } else {
+          p.type = "password";
+          a.style.display = "block";
+          b.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

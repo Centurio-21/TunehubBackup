@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Data</title>
+    <link rel="stylesheet" type="text/css" href="uploaddata.css">
+</head>
+<body>
+
+  <div class="navcontainer">
+    <form action="/adminhome"><button class="goback">Go Back</button></form>
+    <div class="logo">MusicTapes</div>
+    <form action=""><button class="logout">Logout</button></form>
+ </div>
+
+
+
+
+    <h1>Upload Page</h1>
+    <div class="fullcontainer">
+      
+    <div class="wrapper">
+        <form action="/upload" method="post">
+    <div class="upcontainer">
+
+        <div class="upc1">
+            <label for="">Song Name</label>
+            <input type="text" name="songname">
+        </div>
+
+        <div class="upc2">
+            <label for="">Song Image Link</label>
+            <input  type="text"id="imagetext" onchange="previewImage()" name="songimagelink">
+        </div>
+
+        <div class="upc3">
+            <label for="">Song Link</label>
+            <input type="text" id="audiotext" onchange="previewVideo()" name="songlink">
+        </div>
+
+        <div class="upc5">
+          <label for="">Genre</label>
+          <input type="text" name="genre">
+      </div>
+
+      <div class="upc6">
+        <label for="">Artist</label>
+        <input type="text" name="artist">
+    </div>
+            
+        
+        <div class="upc4">
+            <label for="">Song Description</label>  
+            <textarea name="songdescription" id="" cols="30" rows="3"></textarea>
+        </div>
+
+        <button>UPLOAD</button>
+
+    </div>
+</form> 
+
+</div>
+
+    <div class="previewcontainer">
+        <img id="animeimg" th:src="@{#}" alt="preview here">
+        <audio th:src="@{#}" id="animeaudio" controls type="audio/mp3"></audio>   
+    </div>
+</div>
+</body>
+<script>
+
+function previewImage(){
+  var imageUrl = document.getElementById('imagetext').value;
+  var imagePreview = document.getElementById('animeimg');
+
+  if (imageUrl) {
+    imagePreview.src = imageUrl;
+  } else {
+    alert('Please enter an image URL');
+  }
+}
+
+function previewVideo() {
+  var audioUrl = document.getElementById('audiotext').value;
+  var audioPreview = document.getElementById('animeaudio');
+
+  if (audioUrl) {
+    audioPreview.src = audioUrl;
+  } else {
+    alert('Please enter an image URL');
+  }
+}
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <script
+      src="https://kit.fontawesome.com/c31787acac.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+    <div class="navcontainer">
+        <form action="/home" class="gotohomeform"><button class="gotohome"><i class="fa-solid fa-house"></i> HOME</button></form>
+        <div class="logo"><h2>MusicTapes</h2></div>
+        <form action="/login" class="gotologinrform"><button class="gotologin">Login <i class="fa-solid fa-right-to-bracket"></i></button></form>
+     </div>
+
+    
+    <div class="wrapper">
+        <div class="imagecontainer">
+            <img src="/images/phonemusic.jpeg" alt="">
+        </div>
+        
+        <div class="formcontainer">
+            <h2>REGISTER HERE</h2>
+            <form action="/login" method="post">
+
+                <div class="username">
+                    <input type="text" name="" id="username" placeholder="UserName" required>
+                    <label for="username">UserName</label>
+                </div>
+
+                <div class="email">
+                    <input type="text" name="" id="email" placeholder="Email Address" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="password">
+                    <input type="password" name="" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="accessmember">
+                    <h4>Member Auth Role : </h4>
+                    <input type="radio" name="role" id="" value="admin"><label for="">Admin</label>
+                    <input type="radio" name="role" id="" value="customer"><label for="">Melomaniac</label>
+                </div>
+                <div class="interestfield">
+                    <label for="">Interest Field</label>
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Type your Interest or Recommendations here..."></textarea>
+                </div>
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

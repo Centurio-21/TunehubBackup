@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music View Data</title>
+    <link rel="stylesheet" href="viewdata.css">
+</head>
+<body>
+
+
+    <div class="bodycontent">
+
+        <div class="navcontainer">
+            <form action="/adminhome"><button class="goback">Go Back</button></form>
+            <div class="logo">MusicTapes</div>
+            <form action=""><button class="logout">Logout</button></form>
+         </div>
+
+    <h1>VIEW DATA</h1>
+    <p>Hey Admin..!, here is where you can see all the uploaded songs...</p>
+
+    <div class="wrapper">
+        <table  th:each="song : ${songs}" style="margin:20px">
+            <thead>   
+                
+                
+                <tr class="main" >
+                    <td rowspan="2"><img th:src="${song.songimagelink}" alt="" class="image"></td>
+                    <th>Song name</th>
+                    <th>Artist</th>
+                    <th>Play Song Here</th>
+                </tr>
+                <tr class="child1" >
+                    <td th:text="${song.songname}"></td>
+                    <td th:text="${song.artist}"></td>
+                    <td class="auimg">
+                        <audio th:src="${song.songlink}" controls></audio>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td th:text="${song.songdescription}"  colspan="5" ></td>
+                </tr>
+
+                
+            </thead>  
+        </table>
+    </div>
+</div>
+</body>
+</html>

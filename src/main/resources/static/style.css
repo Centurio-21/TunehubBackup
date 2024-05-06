@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+body{
+    background-color: rgb(37, 35, 35);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/');
+}
+
+
+
+.wrapper{
+    margin: 0 300px;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0px 20px 50px black;
+}
+
+.navcontainer{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+    box-shadow: 0px 10px 10px rgb(12, 12, 12);
+}
+
+.navcontainer .logo{
+    color: rgb(0, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.searchbox input{
+    width: 250px;
+    height: 25px;
+}
+
+.navlist
+{
+    padding: 10px;
+    width: 500px;
+    
+}
+
+.navlist ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    
+}
+
+.navlist ul li{
+    position: relative;
+   
+}
+
+.navlist ul li a{ 
+   text-decoration: none;
+   color: white;
+   
+}
+
+.navlist ul li::after{
+    content: '';
+    background-color: rgb(0, 255, 255);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top: 22px;
+    transform: scale(0);
+    transform-origin: center;
+    transition-duration: 0.3s;
+}
+
+.navlist ul li:hover::after{
+    transform: scale(1);
+}
+
+.login button{
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login button:hover{
+   
+    background-color: rgb(216, 219, 219);
+    border-radius: 5px;
+}
+
+.scroll{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.scroll .imagescroll{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.contentcontainer{
+    margin-top: 20px;
+    margin-left: 15%;
+    width: 75%;
+
+}
+
+.contentcontainer h2{
+    text-align: center;
+    color: rgb(0, 255, 255);;
+}
+
+.contentcontainer p{
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: justify;
+    color: aliceblue;
+}
+
+.registercontainer{
+    margin-top: 40px;
+    margin-left: 42%;
+}
+
+.registercontainer button{
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline:none;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.registercontainer button:hover{
+    border: 3px solid rgb(0, 255, 255);
+    background:rgb(211, 211, 211);
+    color: black;
+}
+
+.registercontainer button span{
+    margin-left: 10px;  
+}
+
+marquee{
+    width: 100%;
+    background:  linear-gradient(to left, white, teal);
+    padding: 10px;
+    margin-top: 150px;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: teal;
+    margin-top: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainfooter{
+    margin-left: 70px;
+ }
+
+footer .mainfooter h1{
+   color: rgb(0, 255, 255);
+}
+
+footer .mainfooter p{
+    color: rgb(248, 104, 104);
+ }
+
+footer .regards{
+    font-size: 20px;
+    color: rgb(248, 104, 104);
+    margin-right: 70px;
+
+}

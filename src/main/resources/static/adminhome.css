@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+body{
+    background-color: rgb(37, 35, 35);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.wrapper{
+    background: rgb(51, 51, 51);
+    margin: 0 300px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid violet;
+    justify-content: center;
+    align-items: center;  
+    padding: 20px;
+}
+
+.wrapper h1{
+    color: rgb(0, 255, 255);
+    text-shadow: 2px 2px #232323;
+    margin: 50px 0px;
+}   
+
+.wrapper p{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}  
+
+.navbuttons{
+    display: flex;
+}
+
+.navbuttons button{
+    margin: 50px;
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    background: teal;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.navbuttons button:hover{
+    background: linear-gradient(to left,darkgray 0,rgb(0, 204, 255) 100%);
+    color: black;
+}
+
+form .logout{
+    margin: 50px;
+    height: 45px;
+    width: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgb(213, 69, 69);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+form .logout:hover{
+    background: linear-gradient(to left,darkgray 0,rgb(255, 98, 98) 100%);
+    color: black;
+}
+
+.report form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.report form textarea{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+.report form input{
+    position: relative;
+    width: 700px;
+    height: 50px;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.report form button{
+    position: absolute;
+    right: 30px;
+    top: 260px;
+    width: 100px;
+    height: 30px;
+    background: rgb(213, 69, 69);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.report form button:hover{
+    opacity: 0.7;
+}
